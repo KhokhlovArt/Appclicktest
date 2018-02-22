@@ -15,7 +15,7 @@ import com.appclick_test.khokhlovart.appclicktest.Results.AdInfo;
 import java.io.IOException;
 
 public class WebActivity extends AppCompatActivity {
-    public static final int GET_ITEMS = 0;
+    public static final int GET_AD_ID = 0;
     public static final String TEST_ID = "85950205030644900";
     WebView mWebView;
     @Override
@@ -55,7 +55,7 @@ public class WebActivity extends AppCompatActivity {
      ********************************  Loaders  *************************************************************************
      ********************************************************************************************************************/
     private void getAd() {
-        getSupportLoaderManager().restartLoader(GET_ITEMS, null, new LoaderManager.LoaderCallbacks<AdInfo>() {
+        getSupportLoaderManager().restartLoader(GET_AD_ID, null, new LoaderManager.LoaderCallbacks<AdInfo>() {
             @Override
             public Loader<AdInfo> onCreateLoader(int id, Bundle args) {
 
