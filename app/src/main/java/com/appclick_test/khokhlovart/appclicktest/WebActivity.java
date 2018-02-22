@@ -83,7 +83,9 @@ public class WebActivity extends AppCompatActivity {
                 else if (!res.status.equals(getString(R.string.result_ok))) {
                     showDialog(res.message);
                 } else {
-                    mWebView.loadUrl(res.url);
+                    if (mWebView != null) {
+                        mWebView.loadUrl(res.url);
+                    }
                     setVisibleInMainGIThred(R.id.progressBar, View.GONE);
                 }
             }
